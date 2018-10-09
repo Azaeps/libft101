@@ -6,7 +6,7 @@
 /*   By: thperchi <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 05:41:03 by thperchi     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/08 20:01:35 by thperchi    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 16:09:55 by thperchi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,34 +15,22 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int x;
-	unsigned int y;
-	unsigned int z;
+	size_t x;
+	size_t dest1;
+	size_t src1;
 
 	x = 0;
-	y = 0;
-	z = 0;
-	(void)size;
-	while (dst[x])
-		x++;
-	while (src[y])
+	dest1 = ft_strlen(dst);
+	src1 = ft_strlen(src);
+	if (size == 0)
+		return (dest1 + src1);
+	if (size - 1 <= dest1)
+		return (src1 + size);
+	while (dest1 + x < size - 1)
 	{
-		dst[x++] = src[y++];
+		dst[dest1 + x] = src[x];
+		x++;
 	}
-	dst[x] = '\0';
-	while (dst[z])
-		z++;
-	return (z);
-}
-
-int main(void)
-{
-	char x []= "Hello, world.";
-	char *r =  malloc(30 * sizeof(x));
-	ft_strlcat (r, x, 9);
-	ft_strlcat (r , x+7, 15);
-	for(; *r != '\0'; r++)
-		printf("%c-", *r);
-	printf("\n");  
-	return 0;
+	dst[dest1 + x] = '\0';
+	return (dest1 + src1);
 }

@@ -6,14 +6,14 @@
 /*   By: thperchi <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/08 01:58:37 by thperchi     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/05 16:51:25 by thperchi    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 16:10:50 by thperchi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(char *str)
+int		ft_strlen(const char *str)
 {
 	int x;
 

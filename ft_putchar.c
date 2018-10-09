@@ -6,14 +6,14 @@
 /*   By: thperchi <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/11 03:41:57 by thperchi     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/05 16:51:03 by thperchi    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 17:13:08 by thperchi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_putchar(char const c)
 {
 	write(1, &c, 1);
 }

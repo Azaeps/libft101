@@ -6,7 +6,7 @@
 /*   By: thperchi <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 04:49:47 by thperchi     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/08 18:00:22 by thperchi    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 14:18:00 by thperchi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	int x;
 
 	x = 0;
-	while (s[x])
+	while (s[x] || c == '\0')
 	{
 		if (s[x] == c)
 			return ((char *)s + x);

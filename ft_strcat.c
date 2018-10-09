@@ -6,14 +6,12 @@
 /*   By: thperchi <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/08 02:05:57 by thperchi     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/08 14:41:19 by thperchi    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 16:11:55 by thperchi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strlen(char *str);
 
 char	*ft_strcat(char *dest, char *src)
 {

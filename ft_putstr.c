@@ -6,23 +6,24 @@
 /*   By: thperchi <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/11 03:43:05 by thperchi     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/08 14:41:07 by thperchi    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 17:29:10 by thperchi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str)
+void	ft_putstr(char const *s)
 {
+	char *str;
 	int x;
 
+	if(!(str = (char *)s))
+		return ;
 	x = 0;
 	while (str[x])
 	{
-		ft_putchar(str[x]);
+		write(1, &str[x], 1);
 		x++;
 	}
 }
